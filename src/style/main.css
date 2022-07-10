@@ -1,0 +1,58 @@
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: url("/media/frontpage_anim.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    position: relative;
+    height: 100%;
+    transition: all 2000ms;
+}
+
+.main-link-container {
+    /* positioning */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    /* visuals */
+    border: 2px solid var(--white);
+    background-color: black;
+    padding: 10px 1em 10px 8px;
+    opacity: 0.8;
+}
+
+.main-link {
+    padding-right: 0.2em;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+.main-link:before { content:"~» " }
+.main-link:after { content:"" }
+.main-link:link { color: #f1f1f1; text-decoration: none;}
+.main-link:visited { color: #f1f1f1; text-decoration: none;}
+.main-link:active { color: #000; text-decoration: none;}
+.main-link:hover, ::selection { background-color:#cccccc; color:#000; text-decoration:none; }
+
+/* credit: https://concealed.world/ */
+span {
+    border-right: 0.9em solid var(--white);
+    animation: blinkcaret 1.2s step-end infinite;
+    display: inline-block;
+    height: 1.8em;
+    margin-bottom: -6px;
+}
+
+@keyframes blinkcaret {
+50% {
+    border-color: transparent;
+}
+}

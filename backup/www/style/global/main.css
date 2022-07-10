@@ -1,0 +1,114 @@
+/* definitions */
+@font-face {
+    font-family: 'IBM EGA 8x14';
+    src: url('/fonts/Web437_IBM_EGA_8x14.woff')
+}
+
+/* general */
+html {
+    font-family: 'IBM EGA 8x14', monospace;
+}
+
+body {
+    word-break: break-word;
+}
+
+.linktext:before { content:"{" }
+.linktext:after { content:"}" }
+.linktext[target="_blank"]:before { content:"[" }
+.linktext[target="_blank"]:after { content:"]" }
+.linktext:link { color: #f1f1f1; text-decoration: none;}
+.linktext:visited { color: #f1f1f1; text-decoration: none;}
+.linktext:active { color: #000; text-decoration: none;}
+.linktext:hover, ::selection { background-color:#f1f1f1; color:#000; text-decoration:none }
+
+
+/* utility classes */
+.centered {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* specific unified elements */
+footer {
+    position: absolute;
+    z-index:100;
+    bottom:15px;
+    right:20px;
+    transition: all 4000ms
+}
+footer img {
+    width:30px;
+    margin-left:0px;
+}
+
+.nav, .content, .compactnav {
+    border: double 2px white;
+    background: rgba(0,0,0,0.86);
+}
+
+.nav {
+    width: 40em;
+    padding: 8px 16px 8px 16px;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    display: flex;
+}
+
+.nav .links {
+    padding: 1em;
+    font-size: 20px;
+}
+
+.nav .avatar {
+    height: 8em;
+    width: 8em;
+    border: 2px double white;
+}
+
+.compactnav {
+    display: none;
+    margin: 0 auto;
+}
+
+.content {
+    width: 40em;
+    padding: 8px 16px 8px 16px;
+    margin: 0 auto;
+}
+
+.content h1, .content h2 {
+    border-bottom: solid 2px white;
+    padding-left: 0.4em;
+    margin-bottom: 0;
+}
+
+.content h3 {
+    margin-left: 1em;
+}
+.content p, .content ul, .content li {
+    margin-left: 2em;
+}
+
+.content h1::after,
+.content h1::before {
+    content: '/';
+}
+
+@media only screen and (max-width: 720px) {
+    .compactnav {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .content {
+        width: 85%;
+        padding: 8px 16px 8px 16px;
+        margin: 0 auto;
+    }
+}

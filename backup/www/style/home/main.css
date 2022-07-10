@@ -1,0 +1,11 @@
+html {
+    color: white;
+}
+
+body {
+    background: url('/media/home/starry_sky.gif') no-repeat black;
+    background-attachment: fixed;
+    background-position: center 20%;
+    color: white;
+    height: 100%;
+}
